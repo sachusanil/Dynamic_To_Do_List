@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dynamic To do List</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<ul class="nav justify-content-center">
+	  <li class="nav-item">
+	    <a class="nav-link active" href="#">Home</a>
+	  </li>
+	  <li class="nav-item">
+	    <a class="nav-link" href="#">About</a>
+	  </li>
+	</ul>
+	<div class="container">
+  	<div class="row">
+	    <div class="col">
+	    <h1 class="display-4 text-center">Dynamic Todo List</h1>
+	    </div>
+	 </div>
+	 <div class="row">
+	    <div class="col">
+	     	<form>
+			  <div class="form-group">
+			    <input type="text" id="InputEnter" class="form-control"  placeholder="Enter Items to Add">
+			  </div>
+			</form>
+	    </div>
+	    <div class="row">
+	    	<div class="col">
+	    		<button type="button" class="btn btn-dark" id="Add">Add</button>
+	    	</div>
+	    </div>
+	 </div>
+
+	 <div class="container">
+  		<div class="row">
+		    <div class="col d-flex justify-content-center">
+		    	<ul class="list-group list-group-flush" id="Main_List">
+				</ul>
+		    </div>
+	 	</div>
+	</div>	
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
