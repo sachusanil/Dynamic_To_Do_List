@@ -4,28 +4,33 @@ var ul = document.getElementById("Main_List");
 
 
 function createNewElement(){
-
+// Create the new li element, add the boostrap classes to it and add the event listenr for the style toggle funtcion 
 			var node = document.createElement("li");
-			var nodebutton = document.createElement("button");
 			node.classList.add("list-group-item")
-			nodebutton.classList.add("btn", "btn-dark", "ml-3");
 			node.appendChild(document.createTextNode(input.value));
 			node.addEventListener('click', toggleDone);
+
+// Create the new button  element, add the boostrap classes to it and add function to delete parent li when the button is pressed
+			var nodebutton = document.createElement("button");
+			nodebutton.classList.add("btn", "btn-dark", "ml-3");
 			nodebutton.appendChild(document.createTextNode("Delete"));
 			nodebutton.setAttribute("onclick", "delitems(this);");
+
+//adding the new button to li, and the li to ul.
+
 			node.appendChild(nodebutton);
 			ul.appendChild(node);
 			input.value=("");
-			
+
+//funtion to toggle the stlye
 	function toggleDone() {
     	node.classList.toggle("done");
   		}
 }
 
-
+//funtion to delete items.
 function delitems(e){
 	e.parentNode.parentNode.removeChild(e.parentNode);
-	// return;
 }
 
 function addAfterClick(){ 
@@ -46,7 +51,7 @@ function toggleDone() {
     li.classList.toggle('done');
   }
 
-
+//funtion to check the lengh of the input. 
 function InputLength(){
 	return input.value.length;
 }
